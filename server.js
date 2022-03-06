@@ -4,29 +4,40 @@ const app = express();
 
 app.use(express.json());
 
-// const students = [
-//     {id:1,name :'pedro'},
-//     {id:2,name :'james'}
-// ];
 
 app.get('/',(req,res)=>{
-    res.send('Free REST API - English to Spanish Translator');
+    res.send('Free REST API - Google Translator - by: @miguelsanchezco');
 });
 
-// app.get('/api/students',(req,res)=>{
-//     res.send(students);
-// });
-
-// app.get('/api/students/:id',(req,res)=>{
-//     const student = students.find(estudiantico => estudiantico.id === parseInt(req.params.id));
-//     if (!student) return res.status(400).send('Estudiante no encontrado');
-//     else res.send(student);
-// })
 
 app.post('/api/translate', (req,res)=> {
-    // ccccccccccc
-    english_text = (req.body.text).replace(' ','%20').replace('.','@').replace('!','$')
-    const data = 'f.req=%5B%5B%5B%22MkEWBc%22%2C%22%5B%5B%5C%22' + english_text +'%5C%22%2C%5C%22en%5C%22%2C%5C%22es%5C%22%2Ctrue%5D%2C%5Bnull%5D%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&at=AD08yZlZKMrRdOYeS-X0SSzR0JRG%3A1646398415914&';
+    
+    
+        let l_in = req.body.in // language in
+        if (l_in === undefined){
+            l_in = "en" // default language in: English
+            //console.log("English ",l_in)
+        }
+
+        let l_out = req.body.out // language out
+        if (l_out === undefined){
+            l_out = "es" // default language out: Spanish
+            //console.log("Spanish ",l_out)
+        }
+   
+        let text = (req.body.text)
+        //console.log(text)
+        if (text === undefined){
+            text = 'Error sending request, please check out the documentation' // Error Message
+            //console.log('texto', text)
+        }else{
+            
+            text = text.replace(' ','%20').replace('.','@').replace('!','$')
+            //console.log(text)
+        }
+        
+    
+    const data = 'f.req=%5B%5B%5B%22MkEWBc%22%2C%22%5B%5B%5C%22' + text +'%5C%22%2C%5C%22' + l_in + '%5C%22%2C%5C%22' + l_out + '%5C%22%2Ctrue%5D%2C%5Bnull%5D%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&at=AD08yZlZKMrRdOYeS-X0SSzR0JRG%3A1646398415914&';
     //console.log(data)
     const config = {
         method: 'post',
@@ -75,4 +86,4 @@ app.post('/api/translate', (req,res)=> {
 });
 
 const port = process.env.port || 8080;
-app.listen(port,()=>console.log(`Escuchando en el puerto ${port}`))
+app.listen(port,()=>console.log(`Listening in port: ${port}`))
