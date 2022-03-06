@@ -1,27 +1,33 @@
 # FREE TRANSLATOR API
 
->> version 1.0
+* version 1.0
 
->> Languages: English to Spanish
+* Languages: English to Spanish
+
+## INSTRUCTIONS
 
 How to use?
 
-Just do a POST request to this endpoint: 
->> https://freetranslatorapi.uc.r.appspot.com/api/translate
+* Just do a POST request to this endpoint: 
+> https://freetranslatorapi.uc.r.appspot.com/api/translate
 
-In the body, put a json with the English text to translate. (See the example below)
+* In the BODY, put a json with the English text to translate, Use a text tag. (See the example below)
 
->> { "text" : "Put your english text here and send the request" }
+> { "text" : "Put your english text here and send the request" }
 
-Send the request!
+* Send the request!
 
-You will recieve the translation how a json.
+* You will recieve the translation how a json.
 
->> { "translation": "Pon tu texto en inglés aquí y envía la solicitud." }
+> { 
+>   "translation": "Pon tu texto en inglés aquí y envía la solicitud." 
+> }
 
+* done!
 
-You don't need to clone o share this repository! Just use the API.
+If you would like to donate some money to us, please send it to our paypal account. Thanks!!
+> justmarketco@gmail.com
+
 
 Credits:
-
-### Miguel Angel Sanchez R.
+### miguelsanchezco
