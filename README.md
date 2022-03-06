@@ -2,7 +2,12 @@
 
 * version 1.0
 
-* Languages: English to Spanish
+* Languages: All.
+
+Use this table to select languages (in and out) : 
+> http://utils.mucattu.com/iso_639-1.html
+> 
+Example: English is (en), Spanish is (es), Italian is (it), Russian is (ru), Portuguese is (pt)
 
 ## INSTRUCTIONS
 
@@ -13,9 +18,9 @@ How to use?
 
 * In the BODY, put a json with the English text to translate, Use a text tag. (See the example below)
 
-> { "text" : "Put your english text here and send the request" }
+> { "in":"en", "out":"es", "text" : "Put your english text here and send the request" }
 
-* Send the request!
+* Send a request!
 
 * You will recieve the translation how a json.
 
