@@ -1,11 +1,13 @@
 {
   "name": "apigt",
+  "homepage": "https://miguelsanchezco.github.io/free-translator-api",
   "version": "1.0.0",
   "description": "api google traslator by miguel",
   "main": "index.js",
   "scripts": {
     "nodemon": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "api"
@@ -14,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "gh-pages": "^3.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
