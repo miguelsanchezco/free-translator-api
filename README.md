@@ -1,38 +1,55 @@
-# FREE TRANSLATOR API
+# FREE GOOGLE TRANSLATOR API
+![](https://memoqhelp.zendesk.com/hc/article_attachments/360017409480/googlemtcloudapi.png)
 
-* version 1.0
+* version 2.0
 
-* Languages: All.
+* Languages: **All languages.**
 
-Use this table to select languages (in and out) : 
-> http://utils.mucattu.com/iso_639-1.html
-> 
-Example: English is (en), Spanish is (es), Italian is (it), Russian is (ru), Portuguese is (pt)
+Use the next table to select the **two words code** for languages (input language and output language) : 
+ 
+http://utils.mucattu.com/iso_639-1.html
+
+Example: English code is (**en**), Spanish code is (**es**), Italian code is (**it**), Russian code is (**ru**), Portuguese code is (**pt**)
 
 ## INSTRUCTIONS
 
 How to use?
 
 * Just do a POST request to this endpoint: 
-> https://freetranslatorapi.uc.r.appspot.com/api/translate
 
-* In the BODY, put a json with the English text to translate, Use a text tag. (See the example below)
+  https://freetranslatorapi.uc.r.appspot.com/api/translate
 
-> { "in":"en", "out":"es", "text" : "Put your english text here and send the request" }
+* In the BODY, put a json with the text to translate, set it input and output language. (See the example below)
 
+```  
+{  
+    "in":"en",  
+
+    "out":"es", 
+
+    "text" : "Put your text in any language here and send the request"
+}
+``` 
 * Send a request!
 
 * You will recieve the translation how a json.
 
-> { 
->   "translation": "Pon tu texto en inglés aquí y envía la solicitud." 
-> }
+``` 
+{ 
+  
+    "translation": "Ponga su texto en cualquier idioma aquí y envíe la solicitud." 
+  
+}
+```
 
 * done!
 
-If you would like to donate some money to us, please send it to our paypal account. Thanks!!
-> justmarketco@gmail.com
 
+</br>
+If you would like to donate some money to us, please send it to our Paypal account. Thanks!!
+
+> justmarketco@gmail.com
+</br>
 
 Credits:
-### miguelsanchezco
+#### [miguelsanchezco](https://www.instagram.com/miguelsanchezco/)
